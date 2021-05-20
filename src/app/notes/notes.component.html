@@ -1,0 +1,11 @@
+<h1>Notes</h1>
+<div class="notes">
+
+  <input type="text" #search [(ngModel)]="note">
+  <button (click)="createNote()">Create note</button>
+  <ul>
+    <div [hidden]="!notes">
+      <li *ngFor="let note of notes">{{ note }}</li>
+    </div>
+  </ul>
+</div>
