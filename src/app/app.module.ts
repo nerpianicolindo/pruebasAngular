@@ -13,6 +13,9 @@ import { AdminComponent } from './admin/admin.component';
 import { SettingsComponent } from './settings/settings.component';
 import { AdminMainComponent } from './admin-main/admin-main.component';
 import { NotesComponent } from './notes/notes.component';
+import { MessagesComponent } from './messages/messages.component';
+import { MessageService } from './messages/messages.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,15 +27,17 @@ import { NotesComponent } from './notes/notes.component';
     AdminComponent,
     SettingsComponent,
     AdminMainComponent,
-    NotesComponent
+    NotesComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
     //routing
   ],
-  providers: [],
+  providers: [MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

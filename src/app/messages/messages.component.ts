@@ -17,7 +17,6 @@ export class MessagesComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    this.messageService.add("prueba");
     this.mensajes = this.messageService.getAll();
   }
 

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { NotesComponent } from './notes/notes.component';
+import { MessagesComponent } from './messages/messages.component';
 import { AdminMainComponent } from './admin-main/admin-main.component';
 import { AdminComponent } from './admin/admin.component';
 import { ItemDetailComponent } from './item-detail/item-detail.component';
@@ -10,6 +11,7 @@ import { UsersComponent } from './users/users.component';
 
 const routes: Routes = [
   { path: 'notes', component: NotesComponent, pathMatch: 'full'},
+  { path: 'messages', component: MessagesComponent, pathMatch: 'full'},
   { path: 'users', component: UsersComponent,  pathMatch: 'full'},
   { path: 'items', component: ItemListComponent,  pathMatch: 'full'},
   { path: 'item/:id', component: ItemDetailComponent,  pathMatch: 'full'},
