@@ -1,13 +1,19 @@
 <p>navbar works!</p>
 
 <a routerLink="/items" routerLinkActive="active">Link</a>
-<br/>
+<br />
 <a routerLink="/notes" routerLinkActive="active">Notas</a>
-<br/>
+<br />
 <a routerLink="/messages" routerLinkActive="active">Mensajes</a>
-<br/>
+<br />
 <a routerLink="/users" routerLinkActive="active">Usuarios</a>
-<br/>
-<a routerLink="/register" routerLinkActive="active">Registro</a>
-<br/>
-<a routerLink="/login" routerLinkActive="active">Login</a>
+<br />
+<div *ngIf="user; else loggedOut">
+  {{ user.first_name }}
+  <button (click)="logOut()">Log Out</button>
+</div>
+<ng-template #loggedOut>
+  <a routerLink="/register" routerLinkActive="active">Registro</a>
+  <br />
+  <a routerLink="/login" routerLinkActive="active">Login</a>
+</ng-template>

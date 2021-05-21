@@ -1,6 +1,11 @@
 <div class="login">
   <form class="custom-form" method="post">
     <h1>Login</h1>
+    <div *ngIf="msg">
+      <p class="msg">
+        {{ msg }}
+      </p>
+    </div>
     <input
       type="email"
       [(ngModel)]="email"

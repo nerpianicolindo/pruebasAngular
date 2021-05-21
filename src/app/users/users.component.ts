@@ -39,4 +39,8 @@ export class UsersComponent implements OnInit {
       }
     );
   }
+
+  getUser() {
+    return this.usersService.getUser();
+  }
 }

@@ -19,6 +19,10 @@ export class UsersService {
     return this.http.post("https://reqres.in/api/register", user);
   }
 
+  logout(user: any): void {
+    this.cookies.delete("token");
+  }
+
   setToken(token: string) {
     this.cookies.set("token", token);
   }

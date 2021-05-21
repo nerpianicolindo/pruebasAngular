@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { UsersService } from "../users/users.service";
 import { Router } from "@angular/router"
+import { NavbarComponent } from "../navbar/navbar.component";
 
 @Component({
   selector: "app-login",
@@ -10,8 +11,9 @@ import { Router } from "@angular/router"
 export class LoginComponent {
   email: string = '';
   password: string = '';
+  msg: string = '';
 
-  constructor(public userService: UsersService, public router: Router) {}
+  constructor(public userService: UsersService, public router: Router, public navBar: NavbarComponent) {}
 
   login() {
     const user = {email: this.email, password: this.password};
@@ -20,6 +22,14 @@ export class LoginComponent {
       this.router.navigateByUrl('/home');
     }, error => {
       console.log(error);
+        this.message(error.error.error)
     });
+  }
+
+  private message(msg: string): void {
+    this.msg = msg;
+    setTimeout(() => {
+      this.msg = '';
+    },3000);
   }
 }
