@@ -1,2 +1,8 @@
 <p>users works!</p>
 <p>Hola mundo</p>
+<div *ngIf="data">
+  <ul>
+      <li *ngFor="let user of data.data">{{ user.last_name }}, {{ user.first_name }}</li>
+  </ul>
+</div>
+
