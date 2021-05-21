@@ -11,6 +11,10 @@ export class UsersService {
     //this.http.get('https://reqres.in/api/users?page=2');
   }
 
+  login(user: any): Observable<any> {
+    return this.http.post('https://reqres.in/api/login', user);
+  }
+
   getUsers(): Observable<any> {
     return this.http.get('https://reqres.in/api/users?page=2');
   }
