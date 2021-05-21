@@ -15,6 +15,7 @@ import { AdminMainComponent } from './admin-main/admin-main.component';
 import { NotesComponent } from './notes/notes.component';
 import { MessagesComponent } from './messages/messages.component';
 import { MessageService } from './messages/messages.service';
+import { UsersService } from './users/users.service';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -37,7 +38,10 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule
     //routing
   ],
-  providers: [MessageService],
+  providers: [
+    MessageService,
+    UsersService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
