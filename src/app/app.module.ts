@@ -17,6 +17,8 @@ import { MessagesComponent } from './messages/messages.component';
 import { MessageService } from './messages/messages.service';
 import { UsersService } from './users/users.service';
 import { HttpClientModule } from '@angular/common/http';
+import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { HttpClientModule } from '@angular/common/http';
     SettingsComponent,
     AdminMainComponent,
     NotesComponent,
-    MessagesComponent
+    MessagesComponent,
+    RegisterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
