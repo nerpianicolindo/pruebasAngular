@@ -19,6 +19,8 @@ import { UsersService } from './users/users.service';
 import { HttpClientModule } from '@angular/common/http';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
+import { CookieService } from 'ngx-cookie-service';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,8 @@ import { LoginComponent } from './login/login.component';
     NotesComponent,
     MessagesComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +47,8 @@ import { LoginComponent } from './login/login.component';
   ],
   providers: [
     MessageService,
-    UsersService
+    UsersService,
+    CookieService
   ],
   bootstrap: [AppComponent]
 })

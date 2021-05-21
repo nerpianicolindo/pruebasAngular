@@ -11,9 +11,11 @@ import { UsersComponent } from './users/users.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   { path: '', component: AppComponent, pathMatch: "full" },
+  { path: 'home', component: HomeComponent, pathMatch: "full" },
   { path: 'register', component: RegisterComponent, pathMatch: "full" },
   { path: 'login', component: LoginComponent, pathMatch: "full" },
   { path: 'notes', component: NotesComponent, pathMatch: 'full'},
